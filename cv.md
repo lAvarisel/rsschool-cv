@@ -1,6 +1,6 @@
 ## 1. Dzmitry Melnikov
 ## 2. Contact Info:
-* email: dmitry.melni@gmail.com
+* dmitry.melni@gmail.com
 * [Telegram](https://tlgg.ru/@lAvarisel)
 * [GitHub](https://github.com/lAvarisel)
 ## 3. Summary
