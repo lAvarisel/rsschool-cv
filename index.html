@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="./css/datepicker.min.css" rel="stylesheet" type="text/css">
+    <title>CV</title>
+</head>
+<body>
+    <div class="container">
+        <section class="about">
+            <img class="foto_image" src="./face.jpeg" alt="face_img">
+            <h2>Dzmitry Melnikov</h2>
+        </section>
+        <section class="contact">
+            <h2>Contact</h2>
+            <ul>
+                <li>dmitry.melni@gmail.com</li>
+                <li>
+                    <a href="https://tlgg.ru/@lAvarisel">Telegram</a>
+                </li>
+                <li>
+                    <a href="https://github.com/lAvarisel">GitHub</a>
+                </li>
+            </ul>
+        </section>
+        <section class="summary">
+            <h2>Summary</h2>
+            <p>I want to start my career as a front-end developer by making it my main profession. I am ready to quickly learn, grow, so that over time it is possible to become a team leader.</p>
+        </section>
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+                <li>C#</li>
+                <li>Pug, Less, Sass</li>
+                <li>Git</li>
+                <li>БЭМ</li>
+            </ul>
+        </section>
+        <section class="code_example">
+            <h2>Code examples</h2>
+            <a href="https://github.com/lAvarisel/mimusic.github.io/blob/master/src/blocks/page-news/page-news.pug">github</a>
+            <pre>
+                <code>
+                    mixin page-news(text, mods)
+                    -
+                        var allMods = '';
+                            if(typeof(mods) !== 'undefined' && mods) {
+                            var modsList = mods.split(',');
+                            for (var i = 0; i < modsList.length; i++) {
+                                allMods = allMods + ' page-news--' + modsList[i].trim();
+                            }
+                        }
+                    section.page-news(class=allMods)&attributes(attributes)
+                        .page-news__inner
+                        block
+                
+                    mixin page-news-sliderItem(data, mod)
+                    -
+                        let thisItemClass = 'page-news__sliderItem';
+                        let thisItemId = 'page-news__sliderItem_' + data.id;
+                        if(mod === 'active') {
+                            thisItemClass += '  page-news__sliderItem--active';
+                        }
+                    div(class=thisItemClass id= thisItemId)
+                        span.page-news__prefix= data.prefix
+                        h2.page-news__title= data.title
+                        img.page-news__rectangle(src=data.rectangle, alt='decorate')
+                        span.page-news__date= data.date
+                        p.page-news__content= data.content
+                        +btn('BUY TICKETS', 'page-news__btn')
+                
+                    mixin page-news-item(data, mod)
+                    -
+                        let thisItemClass = 'page-news__item';
+                        let thisItemId = 'page-news__item_' + data.id;
+                        if(mod === 'active') {
+                            thisItemClass += '  page-news__item--active';
+                        }
+                    li(class= thisItemClass id=thisItemId)
+                        span.page-news__itemDate= data.date
+                        h2.page-news__itemTitle= data.title
+                        p.page-news__itemContent= data.content
+                        +btn('BUY TICKETS', 'page-news__btn')(class = 'page-news__btn_mobile')
+                </code>
+            </pre>
+        </section>
+        <section class="experience">
+            <h2>Experience</h2>
+            <p>2 years of work on a <a href="https://www.kreo.net/">project</a> as a consultant</p>
+        </section>
+        <section class="education">
+            <h2>Education</h2>
+            <ul>
+                <li>Belarusian National Technical University</li>
+                <li>IT-Academy (HTML, CSS, JS)</li>
+            </ul>
+        </section>
+        <section class="english">
+            <h2>English</h2>
+            <p>A2</p>
+        </section>
+    </div>
+</body>
