@@ -1,0 +1,28 @@
+.foto_image {
+    width: 300px;
+    border-radius: 50%;
+}
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.contact,
+.summary,
+.skills,
+.code_example,
+.experience,
+.education,
+.english {
+    background-color: lavender;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
